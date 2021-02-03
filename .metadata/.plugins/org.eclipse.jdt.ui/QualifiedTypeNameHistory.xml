@@ -3,4 +3,5 @@
 <fullyQualifiedTypeName name="java.time.Period"/>
 <fullyQualifiedTypeName name="java.time.LocalDate"/>
 <fullyQualifiedTypeName name="br.senai.sp.jandira.moldel.idade"/>
+<fullyQualifiedTypeName name="br.senai.sp.jandira.Aluno"/>
 </qualifiedTypeNameHistroy>
