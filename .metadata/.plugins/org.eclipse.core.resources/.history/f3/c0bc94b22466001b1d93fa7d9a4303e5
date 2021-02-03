@@ -1,0 +1,19 @@
+package br.senai.sp.jandira.moldel;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+public class idade {
+
+	public static void main(String[] args) {
+		
+		
+	LocalDate dataNascimento = LocalDate.of(2004, 7, 14);
+	LocalDate hoje = LocalDate.now();
+	
+	period idade = Period.between(dataNascimento, hoje);
+	
+	
+	}
+
+}
