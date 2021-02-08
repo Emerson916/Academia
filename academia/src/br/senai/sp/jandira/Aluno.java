@@ -1,5 +1,6 @@
 package br.senai.sp.jandira;
 
+import java.time.Period;
 import java.time.LocalDate;
 
 public class Aluno {
@@ -8,7 +9,7 @@ public class Aluno {
 	private double altura;
 	private char genero;
 	private LocalDate dataNascimento;
-	private int idade;
+	private int periodo;
 	
 	
 	/*Set e Get - Nome*/
@@ -54,22 +55,77 @@ public class Aluno {
 	/* Get LocalDate*/
 	
 	public LocalDate dataNascimento() {
-		return this.dataNascimento;
+		LocalDate dataNascimento = LocalDate.of(2004, 7, 14); 
+		
+		return dataNascimento;
 	}
 	
 	/*Set e Get Idade*/
 	
-	public void setidade(int idade) {
-		this.idade = idade;
+	public void setperiodo(int periodo) {
+		this.periodo = periodo;
 	}
 	
-	public int getidade() {
-		return this.idade;
+	public int getperiodo() {
+		
+		LocalDate hoje = LocalDate.now();
+		Period periodo = Period.between(dataNascimento, hoje);
+		
+		return periodo.getYears() ;
 	}
 	
-	/*Metodos ---------- Arrumar !!!! --- IF e Else*/
+	
+	/*#######*/
+	/*Metodos*/ /*Arrumar Metodos ;-;*/
+	/*#######*/
 	
 	public double getImc() {
+		return Math.pow(peso, altura);
+	}
+	
+	/*
+	public double getNcd() {
+		return ;
+	}
+	*/
+	
+	
+	public String getStatusImc(){
+		
+		
+		if(this.getImc()<18.5){
+			return("Abaixo do peso");
+		}else {
+			
+		}
+	    if(this.getImc()>18.5 && this.getImc()<25){
+			return ("Peso ideal - (parabéns");
+		}else {
+			
+		}
+	    if (this.getImc()>25 && this.getImc()<30) {
+	    	return ("Levemente acima do peso");
+	    }else {
+	    	
+	    }
+		if(this.getImc()>30 && this.getImc()<35) {
+			return ("Obesidade I");
+		}else {
+		
+		}
+		if(this.getImc()>35 && this.getImc()<40) {
+			return ("Obesidade II - (Severa)");
+		}else {
+			
+		}
+		if(this.getImc()>40) {
+			return ("Obesidade III - (Mórbida)");
+		}else {
+			
+		}
+		return nome;
 		
 	}
+
+	
 }

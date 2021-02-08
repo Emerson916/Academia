@@ -1,0 +1,27 @@
+package br.senai.sp.jandira.moldel;
+
+import java.time.LocalDate;
+import java.time.Period;
+
+import br.senai.sp.jandira.Aluno;
+
+public class idade {
+
+	public static void main(String[] args) {
+		
+	
+		LocalDate dataNascimento = LocalDate.of(2004, 7, 14); 
+	
+	
+	Aluno Clebson = new Aluno();
+	Clebson.getaltura();
+	Clebson.getpeso();
+	Clebson.getImc();
+	System.out.println("Idade: ");
+	System.out.println("IMC:"+Clebson.getImc());
+	System.out.println("Altura:"+Clebson.getaltura());
+	System.out.println("Peso"+Clebson.getpeso());
+	
+	}
+
+}
